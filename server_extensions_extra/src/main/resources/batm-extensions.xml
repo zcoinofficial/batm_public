@@ -90,6 +90,7 @@
                 <cryptocurrency>BURST</cryptocurrency>
                 <cryptocurrency>ECA</cryptocurrency>
                 <cryptocurrency>DOGE</cryptocurrency>
+                <cryptocurrency>XZC</cryptocurrency>
             </ratesource>
             <paymentprocessor prefix="bitcoinpay" name="BitcoinPay.com" >
                 <param name="apikey" />
@@ -670,6 +671,22 @@
             <cryptocurrency>ECA</cryptocurrency>
         </ratesource>
         <cryptologo cryptocurrency="ECA" file="eca.png"/>
+    </extension>
+    <extension class="com.generalbytes.batm.server.extensions.extra.zcoin.ZcoinExtension" >
+        <wallet prefix="zcoind" name="Zcoind">
+            <param name="protocol"/>
+            <param name="user" />
+            <param name="password" />
+            <param name="host" />
+            <param name="port" />
+            <param name="accountname" />
+            <cryptocurrency>XZC</cryptocurrency>
+        </wallet>
+        <ratesource prefix="zcoinfix" name ="Fix Price" >
+            <param name="price" />
+            <cryptocurrency>XZC</cryptocurrency>
+        </ratesource>
+        <cryptologo cryptocurrency="XZC" file="zcoin.png"/>
     </extension>
     <!--<extension class="com.generalbytes.batm.server.extensions.extra.examples.TransactionExtension" />-->
 </extensions>
